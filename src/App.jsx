@@ -1,18 +1,26 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Icons from './Icons.jsx'
-import Footer from './Footer.jsx'
+import Modals from './Modals.jsx'
 
 function App() {
   return (
     <>
-      <div class='Sidebar'></div>
-      <div class='CalicOS'>
-        <Icons/>
-        <div>
-          <h1 id='title'>Calic OS</h1>
+    <div className='focusScreen'>
+      <div className='Sidebar'></div>
+        <div className='CalicOS'>
+          <Icons/>
+          <Modals/>
+
+          <div className="titleBar">
+            <h1 id='title'>Calic OS</h1>
+          </div>
+          <div className="bottomBar">
+            <p>&copy; {new Date().getFullYear()} Francis Villanueva </p>
+          </div>
         </div>
-        <Footer/>
-      </div>
-      <div class='Sidebar'></div>
+        <div className='Sidebar'></div>
+    </div>
     </>
   );
 }

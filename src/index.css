@@ -20,35 +20,76 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
-footer{
-    background-color: #D9D9D9;
-    text-align: right;
-    padding: 1.5vw;
-    font-size: 2.5vh;
+.focusScreen{
+    height: 100vh;
+    display: flex;
+}
+
+.link {
+    font-size: 2vh;
+    color: black;
+    text-decoration: none;
+
+    }
+
+    a:hover {
+        font-weight: bolder;
+        color: #f24900;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 1rem;
 }
 
 #root{
     height: 100vh;
     width: 100vw;
+
     display: flex;
+    justify-content: center;
+
+    /* To set according to user's time
+        > morning: light blue
+        > afternoon: orange
+        > night: dark blue
+    */
+    background-color: lightblue;
 }
 
 .Sidebar{
-    height: 100vh;
     width: 12.5vw;
     background-color: rebeccapurple;
 }
 
 .CalicOS{
     height: 100vh;
-    width: 75vw;
-    background-image: url('./assets/background.jpg');
+    width: calc(100vh * 4 / 3);
+    margin: 0 auto;
+    
+    background-image: url('./assets/background.png');
     background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleBar{
+    bottom: 0;
+    width: calc(100vh * 4 / 3);
+    position: fixed;
+    text-align: right;
 }
 
 #title{
     font-family: "Nova Flat", sans-serif;
-    text-align: center;
     text-align: right;
     margin: 0;
     margin-bottom: 10vh;
@@ -58,4 +99,16 @@ footer{
 
 #icons{
     display: flex;
+}
+
+.bottomBar{
+    background-color: #D9D9D9;
+    text-align: right;
+    padding: .3vh 1.5vw;
+    font-size: 2.5vh;
+    position: fixed;
+
+    height: 5vh;
+    width: calc(100vh * 4 / 3);
+    bottom: 0;
 }
