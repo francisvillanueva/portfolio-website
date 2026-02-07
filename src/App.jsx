@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Icons from './Icons.jsx'
-import Modals from './Modals.jsx'
 
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
       <div className='Sidebar'></div>
         <div className='CalicOS'>
           <Icons/>
-          <Modals/>
 
           <div className="titleBar">
             <h1 id='title'>Calic OS</h1>
