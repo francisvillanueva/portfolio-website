@@ -183,9 +183,21 @@ li {
     font-weight: bold;
 }
 
+.layout_0{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
 .layout_1 {
     display: flex;
     height: 30vh auto;
+}
+
+.layout_2 {
+    display: flex;
+    height: 30vh auto;
+    gap: 1vh;
 }
 
 /* About Modal */
@@ -206,6 +218,46 @@ li {
     border: 2px solid #808080;
     box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
+
+/* Links Modal */
+
+
+/* Projects Modal */
+.projects-modal p{
+    text-indent: 15px;
+}
+
+.projects-modal .modal-dialog{
+    max-width: 30vw;
+}
+
+.projects-modal .modal-body {
+    height: 30vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Retro scrollbar */
+.modal-body::-webkit-scrollbar {
+    width: 16px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #c0c0c0;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #808080;
+    border: 2px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #696969;
+}
+
+/* Resume modal */
+
 
 /* Contact Modal */
 .contact-modal .modal-content {
