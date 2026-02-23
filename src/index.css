@@ -201,13 +201,7 @@ li {
 
 .layout_1 {
     display: flex;
-    height: 30vh auto;
-}
-
-.layout_2 {
-    display: flex;
-    height: 30vh auto;
-    gap: 1vh;
+    max-height: 30vh;
 }
 
 /* About Modal */

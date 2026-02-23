@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MobileWarning from './MobileWarning'
 
 import Icons from './Icons.jsx'
 
 function App() {
   return (
     <>
+
     <div className='focusScreen'>
       <div className='Sidebar'></div>
         <div className='CalicOS'>
