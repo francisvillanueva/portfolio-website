@@ -6,7 +6,7 @@ import Icons from './Icons.jsx'
 function App() {
   return (
     <>
-
+    <MobileWarning />
     <div className='focusScreen'>
       <div className='Sidebar'></div>
         <div className='CalicOS'>

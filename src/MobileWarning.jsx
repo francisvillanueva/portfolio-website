@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 function MobileWarning() {
   const [isMobile, setIsMobile] = useState(false)
   const [isPortrait, setIsPortrait] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
 
   useEffect(() => {
     const checkDevice = () => {
@@ -10,6 +11,9 @@ function MobileWarning() {
       const portrait = window.innerHeight > window.innerWidth
       setIsMobile(mobile)
       setIsPortrait(portrait)
+
+      // reset dismissed if they go back to portrait
+      if (portrait) setDismissed(false)
     }
 
     checkDevice()
@@ -22,7 +26,8 @@ function MobileWarning() {
     }
   }, [])
 
-  if (!isMobile) return null // don't show on desktop
+  if (!isMobile) return null
+  if (dismissed) return null
 
   return (
     <div style={{
@@ -40,11 +45,54 @@ function MobileWarning() {
       textAlign: 'center',
       padding: '20px'
     }}>
-      <>
-        <div style={{ fontSize: '60px' }}>🖥️</div>
-        <h2>Best Viewed on Desktop</h2>
-        <p>This portfolio is only optimized for desktop at the moment. For the best experience, please visit on a computer.</p>
-    </>
+      {isPortrait ? (
+        <>
+          <h2>Please Rotate Your Phone</h2>
+          <p>Please rotate your device to landscape mode for a better experience.</p>
+        </>
+      ) : (
+        <>
+          <h2>Best Viewed on Desktop</h2>
+          <p>This portfolio is optimized for desktop. please visit it on a desktop computer.</p>
+
+          <div style={{
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            borderRadius: '12px',
+            padding: '16px 20px',
+            margin: '16px 0',
+            maxWidth: '320px',
+            textAlign: 'left'
+          }}>
+            <p style={{ margin: '0 0 8px', fontWeight: 'bold' }}>How to enable Desktop Site:</p>
+            <p style={{ margin: '0 0 6px' }}>
+              <strong>Chrome:</strong> Tap the 3 dots (⋮) → Check <em>"Desktop site"</em>
+            </p>
+            <p style={{ margin: '0 0 6px' }}>
+              <strong>Safari:</strong> Tap the <em>AA</em> icon → <em>"Request Desktop Website"</em>
+            </p>
+            <p style={{ margin: 0 }}>
+              <strong>Firefox:</strong> Tap the 3 dots (⋮) → <em>"Request Desktop Site"</em>
+            </p>
+          </div>
+
+          <button
+            onClick={() => setDismissed(true)}
+            style={{
+              marginTop: '12px',
+              padding: '10px 24px',
+              backgroundColor: 'white',
+              color: 'black',
+              border: 'none',
+              borderRadius: '8px',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              fontSize: '14px'
+            }}
+          >
+            Got it, continue anyway
+          </button>
+        </>
+      )}
     </div>
   )
 }
