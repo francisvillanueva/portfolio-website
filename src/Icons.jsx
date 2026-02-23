@@ -10,8 +10,8 @@ import MailIcon from './assets/icons/Mail.webp';
 import NotepadIcon from './assets/icons/Notepad.webp';
 import Portrait from './assets/portrait.webp';
 import GitHubIcon from './assets/icons/ghub.png';
-import YouTubeIcon from './assets/icons/YouTube.png';
-import LinkedInIcon from './assets/icons/LinkedIn.png';
+import YouTubeIcon from './assets/icons/youtube.png';
+import LinkedInIcon from './assets/icons/linkedin.png';
 
 function Icons(){
     const [showInfo, setShowInfo] = useState(true);
