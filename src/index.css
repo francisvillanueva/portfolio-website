@@ -183,11 +183,17 @@ li {
     font-weight: bold;
 }
 
+.modal-footer.footer {
+    border-top: #000 solid 3px;
+    background-color: #BEBEBE;
+}
+
 .layout_0 {
     display: flex;
     flex-direction: column;
     gap: 1vh;
-    height: 60vh;
+    min-height: 10vh;
+    max-height: 60vh;
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 10px;
@@ -224,7 +230,33 @@ li {
 }
 
 /* Links Modal */
+.links-modal .modal-content {
+    background-color: #EFEAD7;
+}
 
+.links-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.links-card img{
+    height: 7vh;
+}
+
+.links-card a{
+    font-family: 'Redaction', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3vh;
+}
 
 /* Projects Modal */
 .projects-modal p{
@@ -232,7 +264,7 @@ li {
 }
 
 .projects-modal .modal-body {
-    height: 30vh;
+    height: 50vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -258,6 +290,12 @@ li {
 .modal-body::-webkit-scrollbar-thumb:hover,
 .layout_0::-webkit-scrollbar-thumb:hover {
     background: #696969;
+}
+
+.project-header{
+    display:"flex";
+    flex-direction:"row";
+    align-items:"center";
 }
 
 /* Resume modal */

@@ -9,6 +9,9 @@ import InfoIcon from './assets/icons/Info.webp';
 import MailIcon from './assets/icons/Mail.webp';
 import NotepadIcon from './assets/icons/Notepad.webp';
 import Portrait from './assets/portrait.webp';
+import GitHubIcon from './assets/icons/GitHub.png';
+import YouTubeIcon from './assets/icons/YouTube.png';
+import LinkedInIcon from './assets/icons/LinkedIn.png';
 
 function Icons(){
     const [showInfo, setShowInfo] = useState(true);
@@ -71,7 +74,9 @@ function Icons(){
                     </div>
                 </Modal.Body >
                 <Modal.Footer className="footer">
-                    <Button variant="primary" onClick={() => setShowInfo(false)} className="retro-button">
+                    <Button variant="primary"
+                    onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=fv.goose@gmail.com&su=Hello!&body=Hello Francis,', '_blank')}
+                    className="retro-button">
                         Get in Touch
                     </Button>
                     <Button variant="secondary" onClick={() => setShowInfo(false)} className="retro-button">
@@ -94,13 +99,29 @@ function Icons(){
                 </Modal.Header>
                 <Modal.Body className="body">
                     <div className="layout_0">
-                        
+                        <div className="links-card">
+                            <div className="social-icons">
+                                <a href="https://github.com/francisvillanueva" target="_blank" rel="noopener noreferrer">
+                                    <img src={GitHubIcon} alt="GitHub" className="social-icon" />
+                                    <h3>GitHub</h3>
+                                </a>
+                            </div>
+                            <div className="social-icons"> 
+                                <a href="https://www.youtube.com/@GooseInShoes" target="_blank" rel="noopener noreferrer">
+                                    <img src={YouTubeIcon} alt="YouTube" className="social-icon" />
+                                    <h3>YouTube</h3>
+                                </a>
+                            </div>
+                            <div className="social-icons">
+                                <a href="https://www.linkedin.com/in/frncisv/" target="_blank" rel="noopener noreferrer">
+                                    <img src={LinkedInIcon} alt="LinkedIn" className="social-icon" />
+                                    <h3>LinkedIn</h3>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </Modal.Body >
+                </Modal.Body>
                 <Modal.Footer className="footer">
-                    <div className="layout_2">
-                        
-                    </div>
                     <Button variant="secondary" onClick={() => setShowLinks(false)} className="retro-button">
                         Close
                     </Button>
@@ -121,18 +142,40 @@ function Icons(){
                     <Modal.Title>Projects</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="body">
-                    <div className="layout_0">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-                        </p>
-                        <hr />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-                        </p>
+                    <div className="project-header">
+                        <h3>FacePass</h3> <i>Python, OpenCV, Flask</i>
                     </div>
+                    <a href="https://github.com/francisvillanueva/FacePass" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <hr />
+                    <p>
+                        FacePass is an Internet of Things (IoT)-enabled facial identification logbook system developed to modernize facility management. The system replaces traditional manual logbooks with automated entrance and exit tracking through AI-based facial verification, enhancing operational efficiency, accuracy, and security.
+                    </p>
+                    <p>
+                        FacePass integrates computer vision, deep learning, and IoT infrastructure to provide real-time facility access monitoring. It leverages MobileFaceNet for high-accuracy facial recognition and YOLOv8 for fast and reliable face detection. These models are deployed within a locally hosted IoT framework to ensure low-latency processing and enhanced data privacy.
+                    </p>
+                    <br />
+                    <div className="project-header">
+                        <h3>GamingRigz Website</h3> <i>HTML, JavaScript, React, Node.js</i>
+                    </div>
+                    <a href="https://github.com/francisvillanueva/GamingRigz" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <hr />
+                    <p>
+                        A full-stack e-commerce web application developed to provide an online retail platform for computer hardware and gaming components. The project was collaboratively designed and implemented to support product browsing, order management, and secure transaction workflows for a local retail store.
+                    </p>
+                    <p>
+                        The GamingRigz website was developed using the Laravel framework and deployed within a local development environment powered by XAMPP, where I collaboratively co-programmed and implemented the proposed e-commerce platform for the store Gamingrigz.
+                    </p>
+                    <div className="project-header">
+                        <h3>CalicOS</h3> <i>HTML, JavaScript, React, Node.js</i>
+                    </div>
+                    <a href="https://github.com/francisvillanueva/FacePass" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <hr />
+                    <p>
+                        CalicOS is a full-stack personal portfolio website designed to present projects, self-made pixel art, and creative works within a distinctive Y2K-inspired interface. The platform combines modern web technologies with a nostalgic Windows 98 inspired aesthetic, integrating retro UI elements with contemporary development standards.
+                    </p>
+                    <p>
+                        The website was developed using React for building a dynamic, component-based frontend interface and Node.js for backend services and API handling, while incorporating a visual design inspired by Windows 98 to achieve a Y2K desktop-style user experience.
+                    </p>
                 </Modal.Body >
                 <Modal.Footer className="footer">
                     <Button variant="secondary" onClick={() => setShowProjects(false)} className="retro-button">

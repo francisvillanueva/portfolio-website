@@ -11,7 +11,7 @@ function App() {
           <Icons/>
 
           <div className="titleBar">
-            <h1 id='title'>Calic OS</h1>
+            <h1 id='title'>CalicOS</h1>
           </div>
           <div className="bottomBar">
             <p>&copy; {new Date().getFullYear()} Francis Villanueva </p>
