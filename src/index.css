@@ -200,7 +200,14 @@ li {
 
 .layout_1 {
     display: flex;
-    max-height: 30vh;
+    width: 100%;
+    gap: 1vh;
+    max-height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
 }
 
 /* About Modal */
@@ -210,6 +217,7 @@ li {
 
 .info-modal .modal-content {
     background-color: #EFD971;
+    padding: 0;
 }
 
 .info-modal h6 {
@@ -264,24 +272,28 @@ li {
 
 /* Retro scrollbar */
 .modal-body::-webkit-scrollbar,
-.layout_0::-webkit-scrollbar {
+.layout_0::-webkit-scrollbar,
+.layout_1::-webkit-scrollbar {
     width: 16px;
 }
 
 .modal-body::-webkit-scrollbar-track,
-.layout_0::-webkit-scrollbar-track {
+.layout_0::-webkit-scrollbar-track,
+.layout_1::-webkit-scrollbar-track{
     background: #c0c0c0;
 }
 
 .modal-body::-webkit-scrollbar-thumb,
-.layout_0::-webkit-scrollbar-thumb {
+.layout_0::-webkit-scrollbar-thumb,
+.layout_1::-webkit-scrollbar-thumb {
     background: #808080;
     border: 2px solid;
     border-color: #ffffff #000000 #000000 #ffffff;
 }
 
 .modal-body::-webkit-scrollbar-thumb:hover,
-.layout_0::-webkit-scrollbar-thumb:hover {
+.layout_0::-webkit-scrollbar-thumb:hover,
+.layout_1::-webkit-scrollbar-thumb:hover {
     background: #696969;
 }
 
