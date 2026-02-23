@@ -9,7 +9,7 @@ import InfoIcon from './assets/icons/Info.webp';
 import MailIcon from './assets/icons/Mail.webp';
 import NotepadIcon from './assets/icons/Notepad.webp';
 import Portrait from './assets/portrait.webp';
-import GitHubIcon from './assets/icons/github.png';
+import GitHubIcon from './assets/icons/ghub.png';
 import YouTubeIcon from './assets/icons/YouTube.png';
 import LinkedInIcon from './assets/icons/LinkedIn.png';
 
