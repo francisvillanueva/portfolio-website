@@ -211,6 +211,18 @@ li {
 }
 
 /* About Modal */
+.info-modal .modal-body{
+    display: flex;
+    width: 100%;
+    gap: 1vh;
+    max-height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 1vw;
+}
+
 .info-modal .modal-dialog{
     max-width: 30vw;
 }

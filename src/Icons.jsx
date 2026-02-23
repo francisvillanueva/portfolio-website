@@ -58,19 +58,17 @@ function Icons(){
                     <Modal.Title>About Me</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="body">
-                    <div className="layout_1">
-                        <div className="illustration">
-                            <img src = {Portrait} alt="Portrait" id='portrait'/>
-                        </div>
-                        <div className="contact-form">
-                            <h1>Hello There,</h1>
-                            <h3>I'm Francis Villanueva</h3>
-                            <h6>Welcome to my portfolio</h6>
-                            <hr/>
-                            <p>I'm a computer science student from Pamantasan ng Lungsod ng Pasig.
-                                I have a passion for programming and eager to learn and grow as a developer.
-                            </p>
-                        </div>
+                    <div className="illustration">
+                        <img src = {Portrait} alt="Portrait" id='portrait'/>
+                    </div>
+                    <div className="contact-form">
+                        <h1>Hello There,</h1>
+                        <h3>I'm Francis Villanueva</h3>
+                        <h6>Welcome to my portfolio</h6>
+                        <hr/>
+                        <p>I'm a computer science student from Pamantasan ng Lungsod ng Pasig.
+                            I have a passion for programming and eager to learn and grow as a developer.
+                        </p>
                     </div>
                 </Modal.Body >
                 <Modal.Footer className="footer">
