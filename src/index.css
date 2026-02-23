@@ -183,10 +183,14 @@ li {
     font-weight: bold;
 }
 
-.layout_0{
+.layout_0 {
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
 }
 
 .layout_1 {
@@ -227,10 +231,6 @@ li {
     text-indent: 15px;
 }
 
-.projects-modal .modal-dialog{
-    max-width: 30vw;
-}
-
 .projects-modal .modal-body {
     height: 30vh;
     overflow-y: auto;
@@ -238,26 +238,86 @@ li {
 }
 
 /* Retro scrollbar */
-.modal-body::-webkit-scrollbar {
+.modal-body::-webkit-scrollbar,
+.layout_0::-webkit-scrollbar {
     width: 16px;
 }
 
-.modal-body::-webkit-scrollbar-track {
+.modal-body::-webkit-scrollbar-track,
+.layout_0::-webkit-scrollbar-track {
     background: #c0c0c0;
 }
 
-.modal-body::-webkit-scrollbar-thumb {
+.modal-body::-webkit-scrollbar-thumb,
+.layout_0::-webkit-scrollbar-thumb {
     background: #808080;
     border: 2px solid;
     border-color: #ffffff #000000 #000000 #ffffff;
 }
 
-.modal-body::-webkit-scrollbar-thumb:hover {
+.modal-body::-webkit-scrollbar-thumb:hover,
+.layout_0::-webkit-scrollbar-thumb:hover {
     background: #696969;
 }
 
 /* Resume modal */
+.resume-section {
+    margin-bottom: 20px;
+}
 
+.resume-section h3 {
+    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.resume-section hr {
+    border: none;
+    border-top: 3px solid #000;
+    margin: 5px 0 15px 0;
+}
+
+.resume-item {
+    margin-bottom: 15px;
+}
+
+.resume-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.resume-item-header h4 {
+    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.resume-date {
+    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-size: 13px;
+    text-align: right;
+    font-style: italic;
+}
+
+.resume-degree {
+    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    margin: 0;
+}
+
+.resume-item-body{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.resume-skill-line {
+    text-align: justify;
+}
 
 /* Contact Modal */
 .contact-modal .modal-content {

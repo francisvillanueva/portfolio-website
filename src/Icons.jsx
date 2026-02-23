@@ -54,7 +54,7 @@ function Icons(){
                 <Modal.Header className="modal-header">
                     <Modal.Title>About Me</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="body" id='aboutModal'>
+                <Modal.Body className="body">
                     <div className="layout_1">
                         <div className="illustration">
                             <img src = {Portrait} alt="Portrait" id='portrait'/>
@@ -92,7 +92,7 @@ function Icons(){
                 <Modal.Header className="modal-header">
                     <Modal.Title>Links</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="body" id='aboutModal'>
+                <Modal.Body className="body">
                     <div className="layout_0">
                         
                     </div>
@@ -114,16 +114,18 @@ function Icons(){
                 backdrop="static" 
                 keyboard={false}
                 className="projects-modal"
+                size="lg"
                 centered
             >
                 <Modal.Header className="modal-header">
                     <Modal.Title>Projects</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="body" id='aboutModal'>
+                <Modal.Body className="body">
                     <div className="layout_0">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
                         </p>
+                        <hr />
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
                         </p>
@@ -146,14 +148,98 @@ function Icons(){
                 backdrop="static" 
                 keyboard={false}
                 className="resume-modal"
+                size="lg"
                 centered
             >
                 <Modal.Header className="modal-header">
                     <Modal.Title>Resume</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="body" id='aboutModal'>
+                <Modal.Body className="body" id='resumeModal'>
                     <div className="layout_0">
-                        
+                        <h1>Francis Villanueva</h1>
+                        <h6>Computer Science Student | <a href="https://github.com/francisvillanueva" target="_blank" rel="noopener noreferrer">github.com/francisvillanueva</a> | <a href="https://linkedin.com/in/frncisv/" target="_blank" rel="noopener noreferrer">linkedin.com/in/frncisv/</a></h6>
+
+                        <div className="resume-section">
+                            <h3>Education</h3>
+                            <hr />
+                            <div className="resume-item">
+                                <div className="resume-item-header">
+                                    <h4>Pamantasan ng Lungsod ng Pasig</h4>
+                                    <span className="resume-date">2022 – Present</span>
+                                </div>
+                                <p className="resume-degree">Bachelor of Science in Computer Science</p>
+                            </div>
+                            <div className="resume-item">
+                                <div className="resume-item-header">
+                                    <h4>Eusebio High School</h4>
+                                    <span className="resume-date">2018 – 2020</span>
+                                </div>
+                                <p className="resume-degree">Senior High School - STEM <br />Graduated with Honors</p>
+                            </div>
+                        </div>
+                        <div className="resume-section">
+                            <h3>Experience</h3>
+                            <hr />
+                            <div className="resume-item">
+                                <div className="resume-item-header">
+                                    <h4>PC Technician</h4>
+                                    <span className="resume-date">2020 - Present</span>
+                                </div>
+                                <div className="resume-item-body">
+                                    <p className="resume-degree">
+                                        •	Performed component installation, upgrades, maintenance, repairs, and replacements for CPU, GPUs, RAM, PSUs, and motherboards. <br />
+                                        •   Communicated effectively with customers who lacked technical knowledge.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="resume-section">
+                            <h3>Skills</h3>
+                            <hr />
+                            <div className="resume-item">
+                                <div className="resume-item-body">
+                                    <p className="resume-degree">
+                                        <b>Languages:</b> Python, Java, C#, JavaScript, HTML/CSS, PHP
+                                    </p>
+                                    <p className="resume-degree">
+                                        <b>Frameworks/Libraries:</b> React, Node.js, Express, Flask, Laravel
+                                    </p>
+                                    <p className="resume-degree">
+                                        <b>Tools:</b> Git, Visual Studio, Visual Studio Code, InteliJ, Eclipse, Android Studio, XAMPP, DB Browser for SQLite
+                                    </p>
+                                    <p className="resume-degree">
+                                        <b>Database:</b> MySQL
+                                    </p>
+                                    <p className="resume-degree">
+                                        <b>Operating Systems:</b> Windows, Linux (Ubuntu, Debian)
+                                    </p>
+                                    <p className="resume-degree">
+                                        <b>Libraries:</b> Panda, NumPy, Matplotlib, Seaborn
+                                    </p>
+                                    <p className="resume-degree">
+                                        <b>Other Tools:</b> Word, Excel, PowerPoint, Da Vinci Resolve, OBS Studio, Blender, Figma, Claude, ChatGPT, Gemini, Perplexity, Windsurf
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="resume-section">
+                            <h3>Certificates</h3>
+                            <hr />
+                            <div className="resume-item">
+                                <div className="resume-item-header">
+                                    <div style={{display: 'flex', flexDirection: 'row', gap: '0.5vh'}}>
+                                        <h4>SHE++</h4> | <i>PhilDev, Wells Fargo</i>
+                                    </div>
+                                    <span className="resume-date">2025</span>
+                                </div>
+                                <div className="resume-item-header">
+                                    <div style={{display: 'flex', flexDirection: 'row', gap: '0.5vh'}}>
+                                        <h4>Alibaba Cloud</h4> | <i>Alibaba</i>
+                                    </div>
+                                    <span className="resume-date">2025</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </Modal.Body >
                 <Modal.Footer className="footer">
