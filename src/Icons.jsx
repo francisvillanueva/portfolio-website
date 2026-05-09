@@ -66,7 +66,7 @@ function Icons(){
                         <h3>I'm Francis Villanueva</h3>
                         <h6>Welcome to my portfolio</h6>
                         <hr/>
-                        <p>I'm a computer science student from Pamantasan ng Lungsod ng Pasig.
+                        <p>I'm a computer science graduate from Pamantasan ng Lungsod ng Pasig.
                             I have a passion for programming and eager to learn and grow as a developer.
                         </p>
                     </div>
@@ -198,7 +198,7 @@ function Icons(){
                 <Modal.Body className="body" id='resumeModal'>
                     <div className="layout_0">
                         <h1>Francis Villanueva</h1>
-                        <h6>Computer Science Student | <a href="https://github.com/francisvillanueva" target="_blank" rel="noopener noreferrer">github.com/francisvillanueva</a> | <a href="https://linkedin.com/in/frncisv/" target="_blank" rel="noopener noreferrer">linkedin.com/in/frncisv/</a></h6>
+                        <h6>Computer Science Graduate | <a href="https://github.com/francisvillanueva" target="_blank" rel="noopener noreferrer">github.com/francisvillanueva</a> | <a href="https://linkedin.com/in/frncisv/" target="_blank" rel="noopener noreferrer">linkedin.com/in/frncisv/</a></h6>
 
                         <div className="resume-section">
                             <h3>Education</h3>
@@ -206,7 +206,7 @@ function Icons(){
                             <div className="resume-item">
                                 <div className="resume-item-header">
                                     <h4>Pamantasan ng Lungsod ng Pasig</h4>
-                                    <span className="resume-date">2022 – Present</span>
+                                    <span className="resume-date">2022 – 2026</span>
                                 </div>
                                 <p className="resume-degree">Bachelor of Science in Computer Science</p>
                             </div>
@@ -221,6 +221,18 @@ function Icons(){
                         <div className="resume-section">
                             <h3>Experience</h3>
                             <hr />
+                            <div className="resume-item">
+                                <div className="resume-item-header">
+                                    <h4>Full Stack Dev & DevOps Engineer (Internship) | <b>Salenga Law Firm</b></h4>
+                                    <span className="resume-date">2026</span>
+                                </div>
+                                <div className="resume-item-body">
+                                    <p className="resume-degree">
+                                        •   Co-developed a full-stack CMS platform with authentication, SEO with LLM optimization, and DevOps pipelines, handling frontend development, backend API development, and DigitalOcean deployment for Salenga Law Firm
+                                        •   Used Vue.js, Pinia, Strapi as CMS, PostgreSQL, Docker, Nginx, integration with Google Analytics, and Resend email delivery platform
+                                    </p>
+                                </div>
+                            </div>
                             <div className="resume-item">
                                 <div className="resume-item-header">
                                     <h4>PC Technician</h4>

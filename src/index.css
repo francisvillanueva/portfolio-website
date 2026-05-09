@@ -67,6 +67,11 @@ li {
     text-align: center;
 }
 
+li img {
+    display: block;
+    margin: 0 auto;
+}
+
 #root{
     height: 100vh;
     width: 100vw;
@@ -215,7 +220,7 @@ li {
     display: flex;
     width: 100%;
     gap: 1vh;
-    max-height: 50vh;
+    max-height: 70vh;
     overflow-y: auto;
     overflow-x: hidden;
     overflow-y: auto;
@@ -456,4 +461,79 @@ li {
     justify-content: flex-end;
     gap: 1vw;
     margin-top: 2vh;
+}
+
+/*
+ __  __     ______     ______     __     __         ______    
+/\ "-./  \  /\  __ \   /\  == \  /\ \   /\ \       /\  ___\   
+\ \ \-./\ \ \ \ \/\ \  \ \  __<  \ \ \  \ \ \____  \ \  __\   
+ \ \_\ \ \_\ \ \_____\  \ \_____\ \ \_\  \ \_____\  \ \_____\ 
+  \/_/  \/_/  \/_____/   \/_____/  \/_/   \/_____/   \/_____/ 
+*/
+@media (max-width: 768px) {
+
+    #root {
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: white;
+    }
+
+    .Sidebar {
+        display: none;
+    }
+
+    .CalicOS {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #title {
+        display: none;
+    }
+
+    #icons {
+        position: fixed;
+        bottom: 5vh;
+        left: 0;
+        width: 100vw;
+        justify-content: space-around;
+        background: rgba(217, 217, 217, 0.9);
+        padding: 8px 0;
+        z-index: 100;
+    }
+
+    #icons img {
+        height: auto;
+        width: 10vw;
+    }
+
+    #icons a {
+        font-size: 2vh;
+    }
+
+    #icons ul{
+        padding: 0%;
+    }
+
+    .titleBar,
+    .bottomBar {
+        width: 100vw;
+    }
+
+    .modal-dialog,
+    .info-modal .modal-dialog,
+    .contact-modal .modal-dialog {
+        max-width: 90vw;
+        margin: 5px auto;
+    }
+
+    .contact-illustration {
+        display: none;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
 }
