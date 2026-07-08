@@ -13,53 +13,47 @@ import GitHubIcon from './assets/icons/ghub.png';
 import YouTubeIcon from './assets/icons/youtube.png';
 import LinkedInIcon from './assets/icons/linkedin.png';
 
+import PartPicker from './components/PartPicker';
+
 function Icons(){
-    const [showInfo, setShowInfo] = useState(true);
-    const [showLinks, setShowLinks] = useState(false);
-    const [showProjects, setShowProjects] = useState(false);
-    const [showResume, setShowResume] = useState(false);
-    const [showContact, setShowContact] = useState(false);
+    const [activeModal, setActiveModal] = useState('info'); // 'info' open by default on load
+
+    const openModal = (name) => setActiveModal(name);
+    const closeModal = () => setActiveModal(null);
 
     return(
         <div id="icons">
             <ul>
                 <li>
-                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); setShowInfo(true); }}><img src= {InfoIcon} alt="" />About</a>
+                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); openModal('info'); }}><img src={InfoIcon} alt="" />About</a>
                 </li>
                 <li>
-                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); setShowLinks(true); }}><img src={ExplorerIcon} alt="" />Links</a>
+                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); openModal('links'); }}><img src={ExplorerIcon} alt="" />Links</a>
                 </li>
                 <li>
-                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); setShowProjects(true); }}><img src={DocumentsIcon} alt="" />Projects</a>
+                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); openModal('projects'); }}><img src={DocumentsIcon} alt="" />Projects</a>
                 </li>
                 <li>
-                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); setShowResume(true); }}><img src={NotepadIcon} alt="" />Resume</a>
+                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); openModal('resume'); }}><img src={NotepadIcon} alt="" />Resume</a>
                 </li>
-                {/* To add once contact page is secured */}
+                <li>
+                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); openModal('builder'); }}><img src={NotepadIcon} alt="" />PC Builder</a>
+                </li>
                 {/*
-                
                 <li>
-                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); setShowContact(true); }}><img src={MailIcon} alt="" />Contact</a>
+                    <a className="link" href="#" onClick={(e) => { e.preventDefault(); openModal('contact'); }}><img src={MailIcon} alt="" />Contact</a>
                 </li>
-
                 */}
             </ul>
 
             {/* About Modal */}
-            <Modal 
-                show={showInfo} 
-                onHide={() => setShowInfo(false)} 
-                backdrop="static" 
-                keyboard={false}
-                className="info-modal"
-                centered
-            >
+            <Modal show={activeModal === 'info'} onHide={closeModal} backdrop="static" keyboard={false} className="info-modal" centered>
                 <Modal.Header className="modal-header">
                     <Modal.Title>About Me</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="body">
                     <div className="illustration">
-                        <img src = {Portrait} alt="Portrait" id='portrait'/>
+                        <img src={Portrait} alt="Portrait" id='portrait'/>
                     </div>
                     <div className="contact-form">
                         <h1>Hello There,</h1>
@@ -70,28 +64,21 @@ function Icons(){
                             I have a passion for programming and eager to learn and grow as a developer.
                         </p>
                     </div>
-                </Modal.Body >
+                </Modal.Body>
                 <Modal.Footer className="footer">
                     <Button variant="primary"
-                    onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=fv.goose@gmail.com&su=Hello!&body=Hello Francis,', '_blank')}
-                    className="retro-button">
+                        onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=fv.goose@gmail.com&su=Hello!&body=Hello Francis,', '_blank')}
+                        className="retro-button">
                         Get in Touch
                     </Button>
-                    <Button variant="secondary" onClick={() => setShowInfo(false)} className="retro-button">
+                    <Button variant="secondary" onClick={closeModal} className="retro-button">
                         Close
                     </Button>
                 </Modal.Footer>
             </Modal>
 
             {/* Links Modal */}
-            <Modal 
-                show={showLinks} 
-                onHide={() => setShowLinks(false)} 
-                backdrop="static" 
-                keyboard={false}
-                className="links-modal"
-                centered
-            >
+            <Modal show={activeModal === 'links'} onHide={closeModal} backdrop="static" keyboard={false} className="links-modal" centered>
                 <Modal.Header className="modal-header">
                     <Modal.Title>Links</Modal.Title>
                 </Modal.Header>
@@ -120,22 +107,14 @@ function Icons(){
                     </div>
                 </Modal.Body>
                 <Modal.Footer className="footer">
-                    <Button variant="secondary" onClick={() => setShowLinks(false)} className="retro-button">
+                    <Button variant="secondary" onClick={closeModal} className="retro-button">
                         Close
                     </Button>
                 </Modal.Footer>
             </Modal>
 
             {/* Projects Modal */}
-            <Modal 
-                show={showProjects} 
-                onHide={() => setShowProjects(false)} 
-                backdrop="static" 
-                keyboard={false}
-                className="projects-modal"
-                size="lg"
-                centered
-            >
+            <Modal show={activeModal === 'projects'} onHide={closeModal} backdrop="static" keyboard={false} className="projects-modal" size="lg" centered>
                 <Modal.Header className="modal-header">
                     <Modal.Title>Projects</Modal.Title>
                 </Modal.Header>
@@ -174,24 +153,16 @@ function Icons(){
                     <p>
                         The website was developed using React for building a dynamic, component-based frontend interface and Node.js for backend services and API handling, while incorporating a visual design inspired by Windows 98 to achieve a Y2K desktop-style user experience.
                     </p>
-                </Modal.Body >
+                </Modal.Body>
                 <Modal.Footer className="footer">
-                    <Button variant="secondary" onClick={() => setShowProjects(false)} className="retro-button">
+                    <Button variant="secondary" onClick={closeModal} className="retro-button">
                         Close
                     </Button>
                 </Modal.Footer>
             </Modal>
 
             {/* Resume Modal */}
-            <Modal 
-                show={showResume} 
-                onHide={() => setShowResume(false)} 
-                backdrop="static" 
-                keyboard={false}
-                className="resume-modal"
-                size="lg"
-                centered
-            >
+            <Modal show={activeModal === 'resume'} onHide={closeModal} backdrop="static" keyboard={false} className="resume-modal" size="lg" centered>
                 <Modal.Header className="modal-header">
                     <Modal.Title>Resume</Modal.Title>
                 </Modal.Header>
@@ -261,7 +232,7 @@ function Icons(){
                                         <b>Tools:</b> Git, Visual Studio, Visual Studio Code, InteliJ, Eclipse, Android Studio, XAMPP, DB Browser for SQLite
                                     </p>
                                     <p className="resume-degree">
-                                        <b>Database:</b> MySQL
+                                        <b>Database:</b> MySQL, SQLite, PostgreSQL, Supabase
                                     </p>
                                     <p className="resume-degree">
                                         <b>Operating Systems:</b> Windows, Linux (Ubuntu, Debian)
@@ -275,49 +246,38 @@ function Icons(){
                                 </div>
                             </div>
                         </div>
-                        <div className="resume-section">
-                            <h3>Certificates</h3>
-                            <hr />
-                            <div className="resume-item">
-                                <div className="resume-item-header">
-                                    <div style={{display: 'flex', flexDirection: 'row', gap: '0.5vh'}}>
-                                        <h4>SHE++</h4> | <i>PhilDev, Wells Fargo</i>
-                                    </div>
-                                    <span className="resume-date">2025</span>
-                                </div>
-                                <div className="resume-item-header">
-                                    <div style={{display: 'flex', flexDirection: 'row', gap: '0.5vh'}}>
-                                        <h4>Alibaba Cloud</h4> | <i>Alibaba</i>
-                                    </div>
-                                    <span className="resume-date">2025</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </Modal.Body >
+                </Modal.Body>
                 <Modal.Footer className="footer">
-                    <Button variant="secondary" onClick={() => setShowResume(false)} className="retro-button">
+                    <Button variant="secondary" onClick={closeModal} className="retro-button">
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+            {/* PC Builder Modal */}
+            <Modal show={activeModal === 'builder'} onHide={closeModal} backdrop="static" className="builder-modal" keyboard={false} size="lg" centered>
+                <Modal.Header className="modal-header">
+                    <Modal.Title>PC Builder</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="body">
+                    <PartPicker />
+                </Modal.Body>
+                <Modal.Footer className="footer">
+                    <Button variant="secondary" onClick={closeModal} className="retro-button">
                         Close
                     </Button>
                 </Modal.Footer>
             </Modal>
 
             {/* Contact Modal */}
-            <Modal 
-                show={showContact} 
-                onHide={() => setShowContact(false)} 
-                backdrop="static" 
-                keyboard={false}
-                className="contact-modal"
-                centered
-            >
+            <Modal show={activeModal === 'contact'} onHide={closeModal} backdrop="static" className="contact-modal" centered>
                 <Modal.Header className="header">
                     <Modal.Title>Contact</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="body">
                     <div className="layout_1">
-                        <div className="contact-illustration">
-                        </div>
+                        <div className="contact-illustration"></div>
                         <div className="contact-form">
                             <Form>
                                 <Form.Group className="mb-3">
@@ -337,7 +297,7 @@ function Icons(){
                                 <Button variant="primary" className="retro-button">
                                     Send
                                 </Button>
-                                <Button variant="secondary" className="retro-button" onClick={() => setShowContact(false)}>
+                                <Button variant="secondary" className="retro-button" onClick={closeModal}>
                                     Close
                                 </Button>
                             </div>

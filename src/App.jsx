@@ -1,6 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MobileWarning from './MobileWarning'
-
 import Icons from './Icons.jsx'
 
 function App() {
