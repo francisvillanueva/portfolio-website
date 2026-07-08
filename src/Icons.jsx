@@ -194,13 +194,13 @@ function Icons(){
                             <hr />
                             <div className="resume-item">
                                 <div className="resume-item-header">
-                                    <h4>Full Stack Dev & DevOps Engineer (Internship) | <b>Salenga Law Firm</b></h4>
+                                    <h4><b>Salenga Law Firm |</b> Full Stack Dev & DevOps Engineer (Internship)</h4>
                                     <span className="resume-date">2026</span>
                                 </div>
                                 <div className="resume-item-body">
                                     <p className="resume-degree">
-                                        •   Co-developed a full-stack CMS platform with authentication, SEO with LLM optimization, and DevOps pipelines, handling frontend development, backend API development, and DigitalOcean deployment for Salenga Law Firm
-                                        •   Used Vue.js, Pinia, Strapi as CMS, PostgreSQL, Docker, Nginx, integration with Google Analytics, and Resend email delivery platform
+                                        •   Deployed a production-ready law firm website by designing and implementing secure server infrastructure, deployment pipelines, and SSL-secured multi-domain hosting.
+                                        •	Developed and optimized the application's full-stack architecture by implementing authentication, backend services, frontend functionality, and containerized deployment using Docker, Nginx, Strapi, Vue 3, TypeScript, and Redis.
                                     </p>
                                 </div>
                             </div>
@@ -211,8 +211,8 @@ function Icons(){
                                 </div>
                                 <div className="resume-item-body">
                                     <p className="resume-degree">
-                                        •	Performed component installation, upgrades, maintenance, repairs, and replacements for CPU, GPUs, RAM, PSUs, and motherboards. <br />
-                                        •   Communicated effectively with customers who lacked technical knowledge.
+                                        •	Delivered reliable computer repair and upgrade services by diagnosing hardware issues and installing, maintaining, and replacing PC components.
+                                        •	Improved customer satisfaction by communicating technical issues and hardware recommendations in clear, accessible language to customers with varying levels of technical knowledge.
                                     </p>
                                 </div>
                             </div>

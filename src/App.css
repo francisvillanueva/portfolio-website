@@ -40,3 +40,51 @@
 .read-the-docs {
   color: #888;
 }
+
+/*
+ ______   ______        ______   ______     ______     ______   ______   __     ______     __  __     ______     ______    
+/\  == \ /\  ___\      /\  == \ /\  __ \   /\  == \   /\__  _\ /\  == \ /\ \   /\  ___\   /\ \/ /    /\  ___\   /\  == \   
+\ \  _-/ \ \ \____     \ \  _-/ \ \  __ \  \ \  __<   \/_/\ \/ \ \  _-/ \ \ \  \ \ \____  \ \  _"-.  \ \  __\   \ \  __<   
+ \ \_\    \ \_____\     \ \_\    \ \_\ \_\  \ \_\ \_\    \ \_\  \ \_\    \ \_\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_\ \_\ 
+  \/_/     \/_____/      \/_/     \/_/\/_/   \/_/ /_/     \/_/   \/_/     \/_/   \/_____/   \/_/\/_/   \/_____/   \/_/ /_/ 
+                                                                                                                           
+*/
+.pc-builder { display: flex; flex-direction: column; }
+
+.builder-status { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; color: white; }
+.status-ok { background: #16a34a; }
+.status-error { background: #dc2626; }
+.watts-display { background: #2563a8; padding: 4px 12px; }
+
+.builder-table { padding: 20px; }
+.builder-col-header { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 10px; }
+.builder-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+
+.selected-part { display: flex; gap: 10px; align-items: center; }
+
+.dropdown-wrapper { position: relative; display: inline-block; }
+
+.dropdown-menu-custom {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  max-height: 220px;
+  overflow-y: auto;
+  min-width: 220px;
+  z-index: 1060; /* above bootstrap modal's 1050 */
+}
+
+.dropdown-item-custom {
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.dropdown-item-custom:hover { background: #f0f0f0; }
+.dropdown-item-custom.disabled { color: #999; cursor: default; }
+
+.builder-reminder { background: #d9d9d9; padding: 12px 20px; }
