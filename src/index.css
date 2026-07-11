@@ -20,7 +20,6 @@
     src: url('./assets/Fonts/redaction-35-Bold.ttf') format('truetype');
 }
 
-
 /*
  __  __     ______   __    __     __        
 /\ \_\ \   /\__  _\ /\ "-./  \   /\ \       
@@ -28,18 +27,54 @@
  \ \_\ \_\    \ \_\  \ \_\ \ \_\  \ \_____\ 
   \/_/\/_/     \/_/   \/_/  \/_/   \/_____/                                             
 */
-html{
+:root {
+    /* color palette */
+    --win-gray: #c0c0c0;
+    --win-gray-dark: #808080;
+    --win-gray-darker: #696969;
+    --win-blue: #000080;
+    --win-teal: #008080;
+    --win-bg-panel: #BEBEBE;
+    --win-bg-light: #D9D9D9;
+
+    --border-light: #ffffff;
+    --border-dark: #000000;
+
+    /* Modal-specific accent colors */
+    --about-bg: #EFD971;
+    --links-bg: #EFEAD7;
+
+    /* Status colors (PC Builder) */
+    --status-ok: #16a34a;
+    --status-error: #dc2626;
+    --watts-bg: #2563a8;
+
+    /* Text */
+    --text-muted: #6e6e6e;
+
+    /* Fonts */
+    --font-retro: 'MS Sans Serif', Arial, sans-serif;
+    --font-display: 'Nova Flat', sans-serif;
+    --font-body: 'Quicksand', sans-serif;
+    --font-label: 'Redaction', sans-serif;
+
+    /* Shadows */
+    --shadow-retro: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    --shadow-retro-lg: 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+html {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand', sans-serif;
+    font-family: var(--font-body);
 }
 
-.focusScreen{
+.focusScreen {
     height: 100vh;
     display: flex;
 }
@@ -48,12 +83,11 @@ body{
     font-size: 2vh;
     color: black;
     text-decoration: none;
+}
 
-    }
-
-    a:hover {
-        font-weight: bolder;
-        color: #f24900;
+a:hover {
+    font-weight: bolder;
+    color: #f24900;
 }
 
 ul {
@@ -72,7 +106,7 @@ li img {
     margin: 0 auto;
 }
 
-#root{
+#root {
     height: 100vh;
     width: 100vw;
 
@@ -87,16 +121,16 @@ li img {
     background-color: lightblue;
 }
 
-.Sidebar{
+.Sidebar {
     width: calc(50vw - 66.6667vh);
     background-color: rebeccapurple;
 }
 
-.CalicOS{
+.CalicOS {
     height: 100vh;
     width: calc(100vh * 4 / 3);
     margin: 0 auto;
-    
+
     background-image: url('./assets/background.webp');
     background-size: cover;
 
@@ -106,15 +140,15 @@ li img {
     flex-direction: column;
 }
 
-.titleBar{
+.titleBar {
     bottom: 0;
     width: calc(100vh * 4 / 3);
     position: fixed;
     text-align: right;
 }
 
-#title{
-    font-family: 'Nova Flat', sans-serif;
+#title {
+    font-family: var(--font-display);
     text-align: right;
     margin: 0;
     margin-bottom: 10vh;
@@ -122,8 +156,8 @@ li img {
     font-size: 4em;
 }
 
-#icons{
-    font-family: 'Redaction', sans-serif;
+#icons {
+    font-family: var(--font-label);
     color: black;
     -webkit-text-stroke: 2px white;
     paint-order: stroke fill;
@@ -132,18 +166,38 @@ li img {
     align-items: center;
 }
 
-#icons img{
+.desktop-icon-list img {
     height: 10vh;
     display: block;
     margin-bottom: 4px;
 }
 
-#icons a{
+.desktop-icon-list a,
+.desktop-icon-list .icon-trigger {
     font-size: 3vh;
 }
 
-.bottomBar{
-    background-color: #D9D9D9;
+/* Button-based icon triggers, styled to match previous <a> appearance */
+.icon-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    -webkit-text-stroke: inherit;
+    paint-order: inherit;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+
+.icon-trigger:hover {
+    font-weight: bolder;
+    color: #f24900;
+}
+
+.bottomBar {
+    background-color: var(--win-bg-light);
     text-align: right;
     padding: .3vh 1.5vw;
     font-size: 2.5vh;
@@ -154,42 +208,41 @@ li img {
     bottom: 0;
 }
 
-
 /*
  __    __     ______     _____     ______     __         ______    
 /\ "-./  \   /\  __ \   /\  __-.  /\  __ \   /\ \       /\  ___\   
 \ \ \-./\ \  \ \ \/\ \  \ \ \/\ \ \ \  __ \  \ \ \____  \ \___  \  
- \ \_\ \ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_____\  \/\_____\ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_____\  \/\_____\ 
   \/_/  \/_/   \/_____/   \/____/   \/_/\/_/   \/_____/   \/_____/                                                                    
 */
 .modal-content {
-    background-color: #c0c0c0;
+    background-color: var(--win-gray);
     border: 3px solid;
-    border-color: #ffffff #000000 #000000 #ffffff;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+    box-shadow: var(--shadow-retro);
     border-radius: 0;
-    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-family: var(--font-retro);
 }
 
 .modal-header {
-    background: #000080;
+    background: var(--win-blue);
     color: white;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--border-dark);
     border-radius: 0;
     padding: 8px 12px;
-    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-family: var(--font-retro);
     font-size: 2vh;
     font-weight: bold;
 }
 
 .modal-header .modal-title {
-    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-family: var(--font-retro);
     font-weight: bold;
 }
 
 .modal-footer.footer {
-    border-top: #000 solid 3px;
-    background-color: #BEBEBE;
+    border-top: var(--border-dark) solid 3px;
+    background-color: var(--win-bg-panel);
 }
 
 .layout_0 {
@@ -210,61 +263,57 @@ li img {
     max-height: 50vh;
     overflow-y: auto;
     overflow-x: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
     padding-right: 2vw;
 }
 
 /* About Modal */
-.info-modal .modal-body{
+.info-modal .modal-body {
     display: flex;
     width: 100%;
     gap: 1vh;
     max-height: 70vh;
     overflow-y: auto;
     overflow-x: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
     padding-right: 1vw;
 }
 
-.info-modal .modal-dialog{
+.info-modal .modal-dialog {
     max-width: 30vw;
 }
 
 .info-modal .modal-content {
-    background-color: #EFD971;
+    background-color: var(--about-bg);
     padding: 0;
 }
 
 .info-modal h6 {
-    color: #6e6e6e;
+    color: var(--text-muted);
 }
 
 #portrait {
     height: 30vh;
-    border: 2px solid #808080;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--win-gray-dark);
+    box-shadow: var(--shadow-retro);
 }
 
 /* Links Modal */
 .links-modal .modal-content {
-    background-color: #EFEAD7;
+    background-color: var(--links-bg);
 }
 
-.links-card{
+.links-card {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1vw;
 }
 
-.links-card img{
+.links-card img {
     height: 7vh;
 }
 
-.links-card a{
-    font-family: 'Redaction', sans-serif;
+.links-card a {
+    font-family: var(--font-label);
     color: black;
     text-decoration: none;
 }
@@ -277,7 +326,7 @@ li img {
 }
 
 /* Projects Modal */
-.projects-modal p{
+.projects-modal p {
     text-indent: 15px;
 }
 
@@ -287,7 +336,14 @@ li img {
     overflow-x: hidden;
 }
 
-/* Retro scrollbar */
+/* Retro scrollbar (WebKit) + Firefox fallback */
+.modal-body,
+.layout_0,
+.layout_1 {
+    scrollbar-width: thin;
+    scrollbar-color: var(--win-gray-dark) var(--win-gray);
+}
+
 .modal-body::-webkit-scrollbar,
 .layout_0::-webkit-scrollbar,
 .layout_1::-webkit-scrollbar {
@@ -296,28 +352,28 @@ li img {
 
 .modal-body::-webkit-scrollbar-track,
 .layout_0::-webkit-scrollbar-track,
-.layout_1::-webkit-scrollbar-track{
-    background: #c0c0c0;
+.layout_1::-webkit-scrollbar-track {
+    background: var(--win-gray);
 }
 
 .modal-body::-webkit-scrollbar-thumb,
 .layout_0::-webkit-scrollbar-thumb,
 .layout_1::-webkit-scrollbar-thumb {
-    background: #808080;
+    background: var(--win-gray-dark);
     border: 2px solid;
-    border-color: #ffffff #000000 #000000 #ffffff;
+    border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
 }
 
 .modal-body::-webkit-scrollbar-thumb:hover,
 .layout_0::-webkit-scrollbar-thumb:hover,
 .layout_1::-webkit-scrollbar-thumb:hover {
-    background: #696969;
+    background: var(--win-gray-darker);
 }
 
-.project-header{
-    display:"flex";
-    flex-direction:"row";
-    align-items:"center";
+.project-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* Resume modal */
@@ -326,7 +382,7 @@ li img {
 }
 
 .resume-section h3 {
-    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-family: var(--font-retro);
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -334,7 +390,7 @@ li img {
 
 .resume-section hr {
     border: none;
-    border-top: 3px solid #000;
+    border-top: 3px solid var(--border-dark);
     margin: 5px 0 15px 0;
 }
 
@@ -350,27 +406,27 @@ li img {
 }
 
 .resume-item-header h4 {
-    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-family: var(--font-retro);
     font-size: 14px;
     font-weight: bold;
     margin: 0;
 }
 
 .resume-date {
-    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-family: var(--font-retro);
     font-size: 13px;
     text-align: right;
     font-style: italic;
 }
 
 .resume-degree {
-    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-family: var(--font-retro);
     font-size: 13px;
     font-style: italic;
     margin: 0;
 }
 
-.resume-item-body{
+.resume-item-body {
     text-align: justify;
     text-justify: inter-word;
 }
@@ -380,65 +436,121 @@ li img {
 }
 
 /* PC Builder Modal */
-.pc-builder { display: flex; flex-direction: column; }
+.pc-builder {
+    display: flex;
+    flex-direction: column;
+}
 
-.builder-status { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; color: white; }
-.status-ok { background: #16a34a; }
-.status-error { background: #dc2626; }
-.watts-display { background: #2563a8; padding: 4px 12px; }
+.builder-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    color: white;
+}
 
-.builder-table { padding: 20px; }
-.builder-col-header { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 10px; }
-.builder-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+.status-ok {
+    background: var(--status-ok);
+}
 
-.selected-part { display: flex; gap: 10px; align-items: center; }
+.status-error {
+    background: var(--status-error);
+}
 
-.dropdown-wrapper { position: relative; display: inline-block; }
+.watts-display {
+    background: var(--watts-bg);
+    padding: 4px 12px;
+}
+
+.builder-table {
+    padding: 20px;
+}
+
+.builder-col-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.builder-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.selected-part {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
 
 .dropdown-menu-custom {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 4px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  max-height: 220px;
-  overflow-y: auto;
-  min-width: 220px;
-  z-index: 1060;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    max-height: 220px;
+    overflow-y: auto;
+    min-width: 220px;
+    z-index: 1060;
 }
 
 .dropdown-item-custom {
-  padding: 8px 14px;
-  cursor: pointer;
-  font-size: 14px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 14px;
 }
-.dropdown-item-custom:hover { background: #f0f0f0; }
-.dropdown-item-custom.disabled { color: #999; cursor: default; }
 
-.builder-reminder { background: #d9d9d9; padding: 12px 20px; }
+.dropdown-item-custom:hover {
+    background: #f0f0f0;
+}
+
+.dropdown-item-custom.disabled {
+    color: #999;
+    cursor: default;
+}
+
+.builder-reminder {
+    background: var(--win-bg-light);
+    padding: 12px 20px;
+}
 
 /* Contact Modal */
 .contact-modal .modal-content {
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--border-dark);
+    box-shadow: var(--shadow-retro-lg);
     border-radius: 0;
+    overflow: hidden;
 }
 
 .contact-modal .modal-body {
-    background: #c0c0c0;
+    background: var(--win-gray);
     padding: 0;
 }
 
+.contact-modal .modal-dialog {
+    max-width: 700px;
+}
+
 .contact-illustration {
-    background: #008080;
+    background: var(--win-teal);
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 2px solid #808080;
+    border-right: 2px solid var(--win-gray-dark);
 }
 
 .contact-form {
@@ -447,54 +559,43 @@ li img {
 }
 
 .contact-form .form-label {
-    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-family: var(--font-retro);
     font-size: 14px;
     font-weight: bold;
-    color: #000;
+    color: var(--border-dark);
     margin-bottom: 4px;
 }
 
 .contact-form .form-control {
-    border: 2px solid #808080;
-    border-top-color: #000;
-    border-left-color: #000;
+    border: 2px solid var(--win-gray-dark);
+    border-top-color: var(--border-dark);
+    border-left-color: var(--border-dark);
     border-radius: 0;
     background: white;
-    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-family: var(--font-retro);
 }
 
 .contact-form .form-control:focus {
-    border-color: #808080;
-    border-top-color: #000;
-    border-left-color: #000;
+    border-color: var(--win-gray-dark);
+    border-top-color: var(--border-dark);
+    border-left-color: var(--border-dark);
     box-shadow: none;
 }
 
 .retro-button {
-    font-family: 'MS Sans Serif', Arial, sans-serif;
-    background: #c0c0c0;
+    font-family: var(--font-retro);
+    background: var(--win-gray);
     outline: black solid 2px;
-    border: 2px outset #000;
+    border: 2px outset var(--border-dark);
     border-radius: 0;
-    color: #000;
+    color: var(--border-dark);
     padding: 6px 20px;
     box-shadow: none;
 }
 
 .retro-button:hover {
-    background: #c0c0c0;
-    border: 2px outset #fff;
-}
-
-.contact-modal .modal-dialog {
-    max-width: 700px;
-}
-
-.contact-modal .modal-content {
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 0;
-    overflow: hidden;
+    background: var(--win-gray);
+    border: 2px outset var(--border-light);
 }
 
 .contact-footer {
@@ -504,6 +605,9 @@ li img {
     margin-top: 2vh;
 }
 
+.mobile-home {
+    display: none;
+}
 /*
  __  __     ______     ______     __     __         ______    
 /\ "-./  \  /\  __ \   /\  == \  /\ \   /\ \       /\  ___\   
@@ -512,6 +616,12 @@ li img {
   \/_/  \/_/  \/_____/   \/_____/  \/_/   \/_____/   \/_____/ 
 */
 @media (max-width: 768px) {
+    .mobile-home {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
 
     #root {
         flex-direction: column;
@@ -534,42 +644,6 @@ li img {
         display: none;
     }
 
-    #icons {
-        display: grid;
-        place-items: center;
-        position: fixed;
-        bottom: 5vh;
-        left: 0;
-        width: 100vw;
-        justify-content: space-around;
-        background: rgba(217, 217, 217, 0.9);
-        padding: 8px 0;
-        z-index: 100;
-    }
-
-    #icons ul {
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        list-style: none;
-        gap: 8px;
-    }
-
-    #icons img {
-        height: auto;
-        width: 10vw;
-    }
-
-    #icons a {
-        font-size: 2vh;
-    }
-
-    #icons ul{
-        padding: 0%;
-    }
-
     .titleBar,
     .bottomBar {
         width: 100vw;
@@ -588,5 +662,141 @@ li img {
 
     .contact-form {
         width: 100%;
+    }
+
+    .desktop-icon-list {
+        display: none;
+    }
+
+    /* WEATHER WIDGET */
+    .floating-tier {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        padding-bottom: 90px;
+        width: 100vw;
+        flex: 1;
+        box-sizing: border-box;
+    }
+
+    .widget-badge {
+        background: rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        width: 45vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .weather-widget img {
+        width: 30vw;
+        height: 10vh;
+        object-fit: contain;
+    }
+
+    .widget-time {
+        font-family: var(--font-label);
+        font-weight: bold;
+        font-size: 1.3rem;
+        color: black;
+    }
+
+    .widget-condition {
+        font-family: var(--font-label);
+        font-size: 1rem;
+        color: black;
+    }
+
+    /* WIDGET CONTAINER (app badges + taskbar, anchored together) */
+    .WidgetContainers {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+    }
+
+    .app-badge-row {
+        display: flex;
+        justify-content: left;
+        gap: 24px;
+        padding: 12px 5vw;
+    }
+
+    .app-badge-item {
+        display: flex;
+    }
+
+    /* APPLICATION BADGES (About, PC Builder) */
+    .app-badge {
+        background: rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+        width: 22vw;
+        height: 22vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    .app-badge img {
+        width: 17vw;
+        height: 17vw;
+        object-fit: contain;
+    }
+
+    .app-label {
+        font-family: var(--font-label);
+        font-size: 0.75rem;
+        color: black;
+        text-align: center;
+    }
+
+    /* TASKBAR (Links, Projects, Resume, Contact) */
+    .taskbar-tier {
+        position: static;
+        background: rgba(217, 217, 217, 0.95);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        gap: 4vw;
+    }
+
+    .taskbar-tier .icon-trigger {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: center;
+        width: 20vw;
+        height: 12vh;
+        font-size: 1.6vh !important;
+    }
+
+    .taskbar-tier img {
+        width: 17vw;
+        height: 17vh;
+        object-fit: contain;
+        margin-bottom: 4px;
+    }
+
+    .construction-notice {
+        text-align: center;
+        padding: 40px 20px;
+        font-family: var(--font-retro);
+        font-size: 1.1rem;
     }
 }
