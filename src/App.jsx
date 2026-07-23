@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Icons from './Icons.jsx'
+import Icons from './components/Icons.jsx'
 
 function App() {
   return (
