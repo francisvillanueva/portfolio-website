@@ -21,19 +21,22 @@ export default function About({ show, onClose }) {
                     </Button>
                 </>
             }
-        >
-            <div className="illustration">
-                <img src={Portrait} alt="Portrait" id='portrait'/>
-            </div>
-            <div className="contact-form">
-                <h1>Hello There,</h1>
-                <h3>I'm Francis Villanueva</h3>
-                <h6>Welcome to my portfolio</h6>
-                <hr/>
-                <p>I'm a computer science graduate from Pamantasan ng Lungsod ng Pasig.
-                    I have a passion for programming and eager to learn and grow as a developer.
-                </p>
-            </div>
+        >    
+        <div className="about-illustration">
+            <img src={Portrait} alt="Portrait" id='portrait'/>
+        </div>
+        <div className="about-content">
+            <h1>Hello There,</h1>
+            <h3>I'm Francis Villanueva</h3>
+            <h6>Welcome to my portfolio</h6>
+            <hr/>
+
+            <p className="about-text">
+                I'm a computer science graduate from Pamantasan ng Lungsod ng Pasig.
+                I have a passion for programming and eager to learn and grow as a developer.
+            </p>
+        </div>
+            
         </AppModal>
     );
 }

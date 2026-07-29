@@ -284,6 +284,8 @@ li img {
 .info-modal .modal-content {
     background-color: var(--about-bg);
     padding: 0;
+    container-type: inline-size;
+    container-name: about-modal;
 }
 
 .info-modal h6 {
@@ -294,6 +296,10 @@ li img {
     height: 30vh;
     border: 2px solid var(--win-gray-dark);
     box-shadow: var(--shadow-retro);
+}
+
+.about-text{
+    text-align: justify;
 }
 
 /* Links Modal */
@@ -608,6 +614,7 @@ li img {
 .mobile-home {
     display: none;
 }
+
 /*
  __  __     ______     ______     __     __         ______    
 /\ "-./  \  /\  __ \   /\  == \  /\ \   /\ \       /\  ___\   
@@ -615,11 +622,24 @@ li img {
  \ \_\ \ \_\ \ \_____\  \ \_____\ \ \_\  \ \_____\  \ \_____\ 
   \/_/  \/_/  \/_____/   \/_____/  \/_/   \/_____/   \/_____/ 
 */
+
+@container about-modal (max-width: 480px) {
+    .info-modal .modal-body {
+        flex-direction: column;
+    }
+    .about-illustration {
+        width: 100%;
+    }
+    .about-content {
+        width: 100%;
+    }
+}
+
 @media (orientation: portrait) and (max-width: 900px) {
     .mobile-home {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: 98%;
         width: 100%;
     }
 
