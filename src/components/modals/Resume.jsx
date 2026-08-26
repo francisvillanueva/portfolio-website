@@ -71,7 +71,7 @@ export default function ResumeModal({ show, onClose }) {
                         <h2>Projects</h2>
                         <div className='resume-bullet'>
                             <a href="https://github.com/francisvillanueva/FacePass" target="_blank" rel="noopener noreferrer"><h5>FacePass, An AI Facial Identification Attendance System</h5></a>
-                            <p>2024-2026</p>
+                            <h5>2024-2026</h5>
                         </div>
                         <h6>Python • Flask • SQLAlchemy • PostgreSQL • SQLite • OpenCV • PyTorch</h6>
                         <ul>
@@ -81,7 +81,7 @@ export default function ResumeModal({ show, onClose }) {
 
                         <div className='resume-bullet'>
                             <a href="https://github.com/francisvillanueva/GamingRigz" target="_blank" rel="noopener noreferrer"><h5>GamingRigz, E-Commerce Platform</h5></a>
-                            <p>2025</p>
+                            <h5>2025</h5>
                         </div>
                         <h6>PHP • Laravel • MySQL • Eloquent ORM • Vite</h6>
                         <ul>
@@ -94,7 +94,7 @@ export default function ResumeModal({ show, onClose }) {
                         <h2>Education</h2>
                         <div className='resume-bullet'>
                             <h5>Pamantasan ng Lungsod ng Pasig</h5>
-                            <p>GWA: 1.67</p>
+                            <h5>GWA: 1.67</h5>
                         </div>
                         <h6>Bachelor of Science in Computer Science</h6>
                         <ul>
