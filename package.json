@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.107.0",
+    "@vercel/speed-insights": "^2.0.0",
     "bootstrap": "^5.3.8",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",

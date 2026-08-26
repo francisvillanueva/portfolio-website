@@ -1,73 +1,119 @@
 import AppModal from '../AppModal.jsx';
+import Signature from '../../assets/signature.png'
+import GitHubIcon from '../../assets/icons/ghub.png';
+import YouTubeIcon from '../../assets/icons/youtube.png';
+import LinkedInIcon from '../../assets/icons/linkedin.png';
+import WebsiteIcon from '../../assets/icons/CalicOS.png';
 
 export default function ResumeModal({ show, onClose }) {
     return (
-        <AppModal show={show} onClose={onClose} title="Resume" className="resume-modal" size="lg">
+        <AppModal show={show} onClose={onClose} title="My Resume - ₍^. .^₎⟆" className="resume-modal" size="lg">
             <div className="layout_0">
-                <h1>Francis Villanueva</h1>
-                <h6>Computer Science Graduate | <a href="https://github.com/francisvillanueva" target="_blank" rel="noopener noreferrer">github.com/francisvillanueva</a> | <a href="https://linkedin.com/in/frncisv/" target="_blank" rel="noopener noreferrer">linkedin.com/in/frncisv/</a></h6>
+                <div className="head-container">
+                    <h1>Digital Masonry</h1>
+                    <div className = "head-sub-container">
+                        <p id="date">{new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                        <p>Est. 2000</p>
+                    </div>
+                    <nav id='resume-nav'>
+                        <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#education">Education</a>
+                        <a href="#skills">Skills</a>
+                    </nav>
+                </div>
+                
+                <div className='resume-about'>
+                    <img src={Signature} alt="Signature" id='signature'/>
+                    <h2>Francis Villanueva</h2>
+                    <h4>Your Digital Mason</h4>
+                    <p id='tagline'>Building the digital world one line of code at a time.</p>
+                    <p>Full-stack software engineer with hands-on experience building and deploying full-stack applications with a live CMS-driven website during internship, end-to-end computer-vision attendance system, and a complete e-commerce platform. Strong foundation in software development, problem-solving, and system design, with practical experience delivering reliable and maintainable solutions turning business and technical requirements into working software.</p>
 
-                <div className="resume-section">
-                    <h3>Education</h3>
-                    <hr />
-                    <div className="resume-item">
-                        <div className="resume-item-header">
-                            <h4>Pamantasan ng Lungsod ng Pasig</h4>
-                            <span className="resume-date">2022 – 2026</span>
-                        </div>
-                        <p className="resume-degree">Bachelor of Science in Computer Science</p>
-                    </div>
-                    <div className="resume-item">
-                        <div className="resume-item-header">
-                            <h4>Eusebio High School</h4>
-                            <span className="resume-date">2018 – 2020</span>
-                        </div>
-                        <p className="resume-degree">Senior High School - STEM <br />Graduated with Honors</p>
+                    <div className='resume-icons'>
+                        <a href="https://github.com/francisvillanueva" target="_blank" rel="noopener noreferrer">
+                            <img src={GitHubIcon} alt="GitHub" className="resume-icon"/>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCUZ9c_25SNsxrPsxogtNspA" target="_blank" rel="noopener noreferrer">
+                            <img src={YouTubeIcon} alt="YouTube" className="resume-icon"/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/frncisv/" target="_blank" rel="noopener noreferrer">
+                            <img src={LinkedInIcon} alt="LinkedIn" className="resume-icon"/>
+                        </a>
+                        <a href="https://francisvillanueva.is-a.dev/" target="_blank" rel="noopener noreferrer">
+                            <img src={WebsiteIcon} alt="Personal Website" className="resume-icon"/>
+                        </a>
                     </div>
                 </div>
-                <div className="resume-section">
-                    <h3>Experience</h3>
-                    <hr />
-                    <div className="resume-item">
-                        <div className="resume-item-header">
-                            <h4><b>Salenga Law Firm |</b> Full Stack Dev & DevOps Engineer (Internship)</h4>
-                            <span className="resume-date">2026</span>
+
+                <div className='resume-content'>
+                    <section id='experience'>
+                        <h2>Experience</h2>
+                        <div className='resume-bullet'>
+                            <h5>Full-Stack Developer (Intern) | <a href="https://philippinelawfirm.com/" target="_blank" rel="noopener noreferrer">Salenga Law Firm</a></h5>
+                            <h5>2026</h5>
                         </div>
-                        <div className="resume-item-body">
-                            <p className="resume-degree">
-                                •   Deployed a production-ready law firm website by designing and implementing secure server infrastructure, deployment pipelines, and SSL-secured multi-domain hosting.
-                                •	Developed and optimized the application's full-stack architecture by implementing authentication, backend services, frontend functionality, and containerized deployment using Docker, Nginx, Strapi, Vue 3, TypeScript, and Redis.
-                            </p>
+                        <ul>
+                            <li>Built and implemented the backend architecture for a production law firm website, enabling non-technical staff to publish and update content, by designing the CMS content models and API layer from scratch.</li>
+                            <li>Migrated a production website from WordPress to Strapi CMS with React/Vite, then deployed the application on DigitalOcean using Docker, Nginx, PostgreSQL, and Redis for a scalable and maintainable production environment. Improving consistency, environment management, and development team workflows.</li> 
+                        </ul>
+                        
+                        <div className='resume-bullet'>
+                            <h5>PC Technician | Self-Employed</h5>
+                            <h5>2020 - Present</h5>
                         </div>
-                    </div>
-                    <div className="resume-item">
-                        <div className="resume-item-header">
-                            <h4>PC Technician</h4>
-                            <span className="resume-date">2020 - Present</span>
+                        <ul>
+                            <li>Assisted in the development of web applications and internal tools using JavaScript, HTML, and CSS.</li>
+                        </ul>
+                    </section>
+
+                    <section id='projects'>
+                        <h2>Projects</h2>
+                        <div className='resume-bullet'>
+                            <a href="https://github.com/francisvillanueva/FacePass" target="_blank" rel="noopener noreferrer"><h5>FacePass, An AI Facial Identification Attendance System</h5></a>
+                            <p>2024-2026</p>
                         </div>
-                        <div className="resume-item-body">
-                            <p className="resume-degree">
-                                •	Delivered reliable computer repair and upgrade services by diagnosing hardware issues and installing, maintaining, and replacing PC components.
-                                •	Improved customer satisfaction by communicating technical issues and hardware recommendations in clear, accessible language to customers with varying levels of technical knowledge.
-                            </p>
+                        <h6>Python • Flask • SQLAlchemy • PostgreSQL • SQLite • OpenCV • PyTorch</h6>
+                        <ul>
+                            <li>Engineered an end-to-end automated identification and activity logging system that connected camera hardware, facial recognition, and a web-based administration platform to streamline entrance/exit tracking and provide administrators with centralized activity monitoring and reporting.</li>
+                            <li>Developed the underlying software architecture, implementing REST-style APIs, authentication, relational data models, facial embedding storage and matching, YOLOv8 face detection, MobileFaceNet recognition, and ESP32-CAM MJPEG streaming.</li>
+                        </ul>
+
+                        <div className='resume-bullet'>
+                            <a href="https://github.com/francisvillanueva/GamingRigz" target="_blank" rel="noopener noreferrer"><h5>GamingRigz, E-Commerce Platform</h5></a>
+                            <p>2025</p>
                         </div>
-                    </div>
+                        <h6>PHP • Laravel • MySQL • Eloquent ORM • Vite</h6>
+                        <ul>
+                            <li>Developed an end-to-end e-commerce platform enabling product management, customer ordering, order tracking, and administrative order processing, delivering a complete shopping workflow from product creation through order fulfillment.</li>
+                            <li>Implemented the application backend using Laravel building CRUD operations, relational data models, server-side validation, image upload handling, authentication and authorization controls, order lifecycle and payment-status workflows, and unique order tracking identifiers.</li>
+                        </ul>
+                    </section>
+
+                    <section id='education'>
+                        <h2>Education</h2>
+                        <div className='resume-bullet'>
+                            <h5>Pamantasan ng Lungsod ng Pasig</h5>
+                            <p>GWA: 1.67</p>
+                        </div>
+                        <h6>Bachelor of Science in Computer Science</h6>
+                        <ul>
+                            <li>President's Lister (2023 - 2026)</li>
+                            <li>Dean's Lister (2022 - 2026)</li>
+                            <li>PC Assembly and Disassembly Competition (2023)</li>
+                        </ul>
+                    </section>
+
+                    <section id='skills'>
+                        <h2>Skills</h2>
+                        <p><b>Languages:</b> Python, Java, C/C++, PHP, JavaScript, TypeScript, HTML/CSS, SQL</p>
+                        <p><b>Frameworks & Technologies:</b> React, Vue 3, Node.js, Flask, Laravel, Strapi, Supabase, RESTful APIs, OpenCV, PyTorch, YOLOv8, Vite</p>
+                        <p><b>Cloud & DevOps:</b> Docker, Nginx, Redis, PostgreSQL, MySQL, SQLite, DigitalOcean</p>
+                        <p><b>Tools:</b> Git, GitHub, Visual Studio, VS Code, IntelliJ, Eclipse, Android Studio, XAMPP</p>
+                    </section>
                 </div>
-                <div className="resume-section">
-                    <h3>Skills</h3>
-                    <hr />
-                    <div className="resume-item">
-                        <div className="resume-item-body">
-                            <p className="resume-degree"><b>Languages:</b> Python, Java, C#, JavaScript, HTML/CSS, PHP</p>
-                            <p className="resume-degree"><b>Frameworks/Libraries:</b> React, Node.js, Express, Flask, Laravel</p>
-                            <p className="resume-degree"><b>Tools:</b> Git, Visual Studio, Visual Studio Code, InteliJ, Eclipse, Android Studio, XAMPP, DB Browser for SQLite</p>
-                            <p className="resume-degree"><b>Database:</b> MySQL, SQLite, PostgreSQL, Supabase</p>
-                            <p className="resume-degree"><b>Operating Systems:</b> Windows, Linux (Ubuntu, Debian, Raspberry Pi OS), Android</p>
-                            <p className="resume-degree"><b>Libraries:</b> Panda, NumPy, Matplotlib, Seaborn</p>
-                            <p className="resume-degree"><b>Other Tools:</b> Word, Excel, PowerPoint, Da Vinci Resolve, OBS Studio, Blender, Figma, Claude, ChatGPT, Gemini, Perplexity, Windsurf</p>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
         </AppModal>
     );

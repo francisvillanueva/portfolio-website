@@ -20,6 +20,40 @@
     src: url('./assets/Fonts/redaction-35-Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Quarters';
+    src: url('./assets/Fonts/Quarters-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Avant Garde';
+    src: url('./assets/Fonts/AvantGarde/ITCAvantGardeStd-Bk.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Avant Garde';
+    font-weight: light;
+    src: url('./assets/Fonts/AvantGarde/ITCAvantGardeStd-XLt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Avant Garde';
+    font-weight: medium;
+    src: url('./assets/Fonts/AvantGarde/ITCAvantGardeStd-Md.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Avant Garde';
+    font-weight: 600;
+    src: url('./assets/Fonts/AvantGarde/ITCAvantGardeStd-Demi.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Avant Garde';
+    font-weight: bold;
+    src: url('./assets/Fonts/AvantGarde/ITCAvantGardeStd-Bold.ttf') format('truetype');
+}
+
 /*
  __  __     ______   __    __     __        
 /\ \_\ \   /\__  _\ /\ "-./  \   /\ \       
@@ -53,10 +87,11 @@
     --text-muted: #6e6e6e;
 
     /* Fonts */
-    --font-retro: 'MS Sans Serif', Arial, sans-serif;
+    --font-retro: 'Redaction', sans-serif;
     --font-display: 'Nova Flat', sans-serif;
     --font-body: 'Quicksand', sans-serif;
-    --font-label: 'Redaction', sans-serif;
+    --font-resume: 'Avant Garde', 'sans-serif';
+    --font-headline: 'Quarters', 'sans-serif';
 
     /* Shadows */
     --shadow-retro: 2px 2px 0 rgba(0, 0, 0, 0.5);
@@ -157,7 +192,7 @@ li img {
 }
 
 #icons {
-    font-family: var(--font-label);
+    font-family: var(--font-retro);
     color: black;
     -webkit-text-stroke: 2px white;
     paint-order: stroke fill;
@@ -250,10 +285,9 @@ li img {
     flex-direction: column;
     gap: 1vh;
     min-height: 10vh;
-    max-height: 60vh;
+    max-height: 70vh;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-right: 10px;
 }
 
 .layout_1 {
@@ -319,7 +353,7 @@ li img {
 }
 
 .links-card a {
-    font-family: var(--font-label);
+    font-family: var(--font-retro);
     color: black;
     text-decoration: none;
 }
@@ -383,62 +417,150 @@ li img {
 }
 
 /* Resume modal */
+.resume-modal .modal-content{
+    background-color: #FFF0D1;
+    font-family: var(--font-resume);
+}
+
+.resume-modal .modal-body{
+    padding: 0;
+}
+
 .resume-section {
     margin-bottom: 20px;
 }
 
-.resume-section h3 {
-    font-family: var(--font-retro);
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.head-container{
+    font-family: var(--font-headline);
+    background-color: #213555;
+    border: solid .5vh;
+    border-color: white;
+    border-left: none;
+    border-right: none;
+
+    color: white;
+    text-align: center;
+    padding: .4rem;
 }
 
-.resume-section hr {
-    border: none;
-    border-top: 3px solid var(--border-dark);
-    margin: 5px 0 15px 0;
+.head-container h1{
+    border-top: solid .5vh;
+    border-color: white;
+    width: 100%;
+    padding: .5vh 0;
 }
 
-.resume-item {
-    margin-bottom: 15px;
+.resume-modal .head-sub-container{
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+    border-bottom: solid .5vh;
+    border-color: white;
+
+    font-size: 2vh;
+    padding: 0 2rem;
+    padding-top: .5vh;
 }
 
-.resume-item-header {
+.resume-modal .head-sub-container p{
+    margin: 0;
+}
+
+#resume-nav{
+    text-align: center;
+    border-bottom: solid .5vh;
+    border-color: white;
+}
+
+#resume-nav a{
+    text-decoration: none;
+    color: inherit;
+    padding: .5vh 2vw;
+
+    font-family: var(--font-resume);
+    font-weight: 600;
+}
+
+.resume-about{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding-left: 3rem;
+    gap: 0;
+    min-height: 46vh;
+}
+
+#signature{
+    height: 15rem;
+    width: 15rem;
+    margin-bottom: -8rem;
+}
+
+.resume-about h2{
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.resume-about h4{
+    font-weight: medium;
+}
+
+#tagline{
+    font-weight: light;
+}
+
+.resume-icons{
+    display: flex;
+    gap: 2rem;
+}
+
+.resume-icon{
+    height: 3rem;
+    width: 3rem;
+}
+
+.resume-content{
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+.resume-content h2{
+    border-bottom: solid .5vh;
+    border-color: black;
+}
+
+.resume-content h6{
+    margin-left: 1rem;
+    font-style: italic;
+}
+
+.resume-content a{
+    text-decoration: none;
+    color: orange;
+}
+
+.resume-content ul {
+    list-style: circle;
+    display: block;
+    text-align: justify;
+}
+
+.resume-content li {
+    display: list-item;
+    text-align: justify;
+    margin: 0;
+}
+
+.resume-content a:hover{
+    text-decoration: underline;
+}
+
+.resume-bullet{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 5px;
-}
-
-.resume-item-header h4 {
-    font-family: var(--font-retro);
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.resume-date {
-    font-family: var(--font-retro);
-    font-size: 13px;
-    text-align: right;
-    font-style: italic;
-}
-
-.resume-degree {
-    font-family: var(--font-retro);
-    font-size: 13px;
-    font-style: italic;
-    margin: 0;
-}
-
-.resume-item-body {
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.resume-skill-line {
-    text-align: justify;
+    align-items: center;
 }
 
 /* PC Builder Modal */
@@ -722,14 +844,14 @@ li img {
     }
 
     .widget-time {
-        font-family: var(--font-label);
+        font-family: var(--font-retro);
         font-weight: bold;
         font-size: 1rem;
         color: black;
     }
 
     .widget-condition {
-        font-family: var(--font-label);
+        font-family: var(--font-retro);
         font-size: 0.8rem;
         color: black;
     }
@@ -779,7 +901,7 @@ li img {
     }
 
     .app-label {
-        font-family: var(--font-label);
+        font-family: var(--font-retro);
         font-size: 0.75rem;
         color: black;
         text-align: center;
