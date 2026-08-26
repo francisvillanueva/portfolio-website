@@ -1,7 +1,7 @@
 import AppModal from '../AppModal.jsx';
-import GitHubIcon from '../../assets/icons/ghub.png';
-import YouTubeIcon from '../../assets/icons/youtube.png';
-import LinkedInIcon from '../../assets/icons/linkedin.png';
+import GitHubIcon from '../../assets/icons/ghub.webp';
+import YouTubeIcon from '../../assets/icons/youtube.webp';
+import LinkedInIcon from '../../assets/icons/linkedin.webp';
 
 export default function Links({ show, onClose }) {
     return (

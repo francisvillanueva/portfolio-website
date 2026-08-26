@@ -1,9 +1,11 @@
 import AppModal from '../AppModal.jsx';
-import Signature from '../../assets/signature.png'
-import GitHubIcon from '../../assets/icons/ghub.png';
-import YouTubeIcon from '../../assets/icons/youtube.png';
-import LinkedInIcon from '../../assets/icons/linkedin.png';
-import WebsiteIcon from '../../assets/icons/CalicOS.png';
+import ResumeCarousel from './ResumeCarousel';
+
+import Signature from '../../assets/signature.webp'
+import GitHubIcon from '../../assets/icons/ghub.webp';
+import YouTubeIcon from '../../assets/icons/youtube.webp';
+import LinkedInIcon from '../../assets/icons/linkedin.webp';
+import WebsiteIcon from '../../assets/icons/CalicOS.webp';
 
 export default function ResumeModal({ show, onClose }) {
     return (
@@ -53,6 +55,17 @@ export default function ResumeModal({ show, onClose }) {
                             <h5>Full-Stack Developer (Intern) | <a href="https://philippinelawfirm.com/" target="_blank" rel="noopener noreferrer">Salenga Law Firm</a></h5>
                             <h5>2026</h5>
                         </div>
+                        {/* <div className='resume-carousel-container'>
+                            <ResumeCarousel
+                                images={[
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" }
+                                ]}
+                            />
+                        </div> */}
                         <ul>
                             <li>Built and implemented the backend architecture for a production law firm website, enabling non-technical staff to publish and update content, by designing the CMS content models and API layer from scratch.</li>
                             <li>Migrated a production website from WordPress to Strapi CMS with React/Vite, then deployed the application on DigitalOcean using Docker, Nginx, PostgreSQL, and Redis for a scalable and maintainable production environment. Improving consistency, environment management, and development team workflows.</li> 
@@ -63,7 +76,7 @@ export default function ResumeModal({ show, onClose }) {
                             <h5>2020 - Present</h5>
                         </div>
                         <ul>
-                            <li>Assisted in the development of web applications and internal tools using JavaScript, HTML, and CSS.</li>
+                            <li>•	Restored and Diagnosed hardware issues, optimized desktop performance through repairs and upgrades, and provided technical guidance on hardware decisions.</li>
                         </ul>
                     </section>
 
@@ -97,10 +110,60 @@ export default function ResumeModal({ show, onClose }) {
                             <h5>GWA: 1.67</h5>
                         </div>
                         <h6>Bachelor of Science in Computer Science</h6>
+                        {/* <div className='resume-carousel-container'>
+                            <ResumeCarousel
+                                images={[
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" }
+                                ]}
+                            />
+                        </div> */}
                         <ul>
                             <li>President's Lister (2023 - 2026)</li>
                             <li>Dean's Lister (2022 - 2026)</li>
                             <li>PC Assembly and Disassembly Competition (2023)</li>
+                        </ul>
+
+                        <div className='resume-bullet'>
+                            <h5>Eusebio High School</h5>
+                            <h5>GWA: 90</h5>
+                        </div>
+                        <h6>Science, Technology, Engineering, and Mathematics (STEM)</h6>
+                        {/* <div className='resume-carousel-container'>
+                            <ResumeCarousel
+                                images={[
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" }
+                                ]}
+                            />
+                        </div> */}
+                        <ul>
+                            <li>Graduated with Honors</li>
+                        </ul>
+
+                        <div className='resume-bullet'>
+                            <h5>ADT Montessori High School</h5>
+                            <h5>GWA: 84.25</h5>
+                        </div>
+                        {/* <div className='resume-carousel-container'>
+                            <ResumeCarousel
+                                images={[
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" },
+                                    { src: "/images/sample.png", alt: "alt text" }
+                                ]}
+                            />
+                        </div> */}
+                        <ul>
+                            <li>Graduated with Honors</li>
                         </ul>
                     </section>
 

@@ -1,0 +1,87 @@
+.resume-carousel {
+  margin: 0.75rem 0 1rem;
+  width: 100%;
+  max-width: 480px;
+  flex: none;       /* don't let a flex parent shrink or grow this */
+  outline: none;
+}
+
+.resume-carousel__viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  background: #f4f4f4;
+}
+
+.resume-carousel__track {
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+
+.resume-carousel__slide {
+  flex: 0 0 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.resume-carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.resume-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #222;
+  font-size: 1.25rem;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-carousel__btn:hover {
+  background: #fff;
+}
+
+.resume-carousel__btn--prev {
+  left: 8px;
+}
+
+.resume-carousel__btn--next {
+  right: 8px;
+}
+
+.resume-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 0.5rem;
+}
+
+.resume-carousel__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: #c9c9c9;
+  cursor: pointer;
+  padding: 0;
+}
+
+.resume-carousel__dot.is-active {
+  background: #444;
+  width: 16px;
+  border-radius: 3px;
+}
