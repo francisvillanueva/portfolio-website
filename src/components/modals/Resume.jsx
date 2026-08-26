@@ -76,7 +76,7 @@ export default function ResumeModal({ show, onClose }) {
                             <h5>2020 - Present</h5>
                         </div>
                         <ul>
-                            <li>•	Restored and Diagnosed hardware issues, optimized desktop performance through repairs and upgrades, and provided technical guidance on hardware decisions.</li>
+                            <li>Restored and Diagnosed hardware issues, optimized desktop performance through repairs and upgrades, and provided technical guidance on hardware decisions.</li>
                         </ul>
                     </section>
 
