@@ -105,7 +105,7 @@ export default function ResumeModal({ show, onClose }) {
                         </ul>
                         
                         <div className='resume-bullet'>
-                            <a href="https://github.com/francisvillanueva/portfolio-website" target="_blank" rel="noopener noreferrer"><h5>CalicOS, A Website for My Portfolio</h5></a>
+                            <a href="https://github.com/francisvillanueva/portfolio-website" target="_blank" rel="noopener noreferrer"><h5>CalicOS, A Personal Website Portfolio</h5></a>
                             <h5>2025</h5>
                         </div>
                         <h6>HTML • JavaScript • React • Node.js • Supabase • RESTful APIs • Vite</h6>
