@@ -55,7 +55,8 @@ export default function ResumeModal({ show, onClose }) {
                             <h5>Full-Stack Developer (Intern) | <a href="https://philippinelawfirm.com/" target="_blank" rel="noopener noreferrer">Salenga Law Firm</a></h5>
                             <h5>2026</h5>
                         </div>
-                        {/* <div className='resume-carousel-container'>
+                        <div className='resume-carousel-container'>
+                            {/*
                             <ResumeCarousel
                                 images={[
                                     { src: "/images/sample.png", alt: "alt text" },
@@ -65,7 +66,8 @@ export default function ResumeModal({ show, onClose }) {
                                     { src: "/images/sample.png", alt: "alt text" }
                                 ]}
                             />
-                        </div> */}
+                            */}
+                        </div>
                         <ul>
                             <li>Built and implemented the backend architecture for a production law firm website, enabling non-technical staff to publish and update content, by designing the CMS content models and API layer from scratch.</li>
                             <li>Migrated a production website from WordPress to Strapi CMS with React/Vite, then deployed the application on DigitalOcean using Docker, Nginx, PostgreSQL, and Redis for a scalable and maintainable production environment. Improving consistency, environment management, and development team workflows.</li> 
@@ -101,6 +103,17 @@ export default function ResumeModal({ show, onClose }) {
                             <li>Developed an end-to-end e-commerce platform enabling product management, customer ordering, order tracking, and administrative order processing, delivering a complete shopping workflow from product creation through order fulfillment.</li>
                             <li>Implemented the application backend using Laravel building CRUD operations, relational data models, server-side validation, image upload handling, authentication and authorization controls, order lifecycle and payment-status workflows, and unique order tracking identifiers.</li>
                         </ul>
+                        
+                        <div className='resume-bullet'>
+                            <a href="https://github.com/francisvillanueva/portfolio-website" target="_blank" rel="noopener noreferrer"><h5>CalicOS, A Website for My Portfolio</h5></a>
+                            <h5>2025</h5>
+                        </div>
+                        <h6>HTML • JavaScript • React • Node.js • Supabase • RESTful APIs • Vite</h6>
+                        <ul>
+                            <li>A personal portfolio website that implements real-time weather widgets, geolocation services, caching, and a mobile responsive UI components using React JS.</li>
+                            <li>Developed a Windows-inspired portfolio website designed to contact, present projects, and showcase creative works such as pixel arts within the Y2K-inspired interface. The portfolio integrates Supabase for backend services and external RESTful APIs for dynamic weather and geolocation data.</li>
+                        </ul>
+
                     </section>
 
                     <section id='education'>
@@ -110,7 +123,8 @@ export default function ResumeModal({ show, onClose }) {
                             <h5>GWA: 1.67</h5>
                         </div>
                         <h6>Bachelor of Science in Computer Science</h6>
-                        {/* <div className='resume-carousel-container'>
+                        <div className='resume-carousel-container'>
+                            {/*
                             <ResumeCarousel
                                 images={[
                                     { src: "/images/sample.png", alt: "alt text" },
@@ -120,7 +134,8 @@ export default function ResumeModal({ show, onClose }) {
                                     { src: "/images/sample.png", alt: "alt text" }
                                 ]}
                             />
-                        </div> */}
+                            */}
+                        </div>
                         <ul>
                             <li>President's Lister (2023 - 2026)</li>
                             <li>Dean's Lister (2022 - 2026)</li>
@@ -132,7 +147,8 @@ export default function ResumeModal({ show, onClose }) {
                             <h5>GWA: 90</h5>
                         </div>
                         <h6>Science, Technology, Engineering, and Mathematics (STEM)</h6>
-                        {/* <div className='resume-carousel-container'>
+                        <div className='resume-carousel-container'>
+                            {/*
                             <ResumeCarousel
                                 images={[
                                     { src: "/images/sample.png", alt: "alt text" },
@@ -142,7 +158,8 @@ export default function ResumeModal({ show, onClose }) {
                                     { src: "/images/sample.png", alt: "alt text" }
                                 ]}
                             />
-                        </div> */}
+                            */}
+                        </div>
                         <ul>
                             <li>Graduated with Honors</li>
                         </ul>
@@ -151,7 +168,8 @@ export default function ResumeModal({ show, onClose }) {
                             <h5>ADT Montessori High School</h5>
                             <h5>GWA: 84.25</h5>
                         </div>
-                        {/* <div className='resume-carousel-container'>
+                        <div className='resume-carousel-container'>
+                            {/*
                             <ResumeCarousel
                                 images={[
                                     { src: "/images/sample.png", alt: "alt text" },
@@ -161,7 +179,8 @@ export default function ResumeModal({ show, onClose }) {
                                     { src: "/images/sample.png", alt: "alt text" }
                                 ]}
                             />
-                        </div> */}
+                            */}
+                        </div>
                         <ul>
                             <li>Graduated with Honors</li>
                         </ul>
