@@ -29,7 +29,7 @@ export default function ProjectsModal({ show, onClose }) {
             <div className="project-header">
                 <h3>CalicOS</h3> <i>HTML, JavaScript, React, Vite, Supabase</i>
             </div>
-            <a href="https://github.com/francisvillanueva/CalicOS" target="_blank" rel="noopener noreferrer">View Project</a>
+            <a href="https://github.com/francisvillanueva/portfolio-website" target="_blank" rel="noopener noreferrer">View Project</a>
             <hr />
             <p>
                 CalicOS is a full-stack personal portfolio website designed to present projects, self-made pixel art, and creative works within a distinctive Y2K-inspired interface. The platform combines modern web technologies with a nostalgic Windows 98 inspired aesthetic, integrating retro UI elements with contemporary development standards.
