@@ -1,0 +1,12 @@
+# Francis Villanueva — CalicOS Portfolio
+
+> Personal portfolio website of Francis Villanueva, presented as CalicOS: a Y2K / Windows 98-inspired desktop interface when you visit using a computer and old iOS interface with the mobile view. Designed to present projects, self-made pixel art, personal milestones, and creative works.
+
+## About
+Single-page interactive portfolio simulating a retro desktop OS in desktop and iOS on phones. Built with React and Vite, deployed on Vercel.
+
+## Usage Policy
+AI assistants and crawlers may read this site to answer questions about Francis Villanueva's work, skills, milestones, and projects. Do not use this content to train models without attribution to the source.
+
+## Contact
+GitHub: https://github.com/francisvillanueva

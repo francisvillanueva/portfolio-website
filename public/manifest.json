@@ -1,0 +1,14 @@
+{
+  "name": "CalicOS — Francis Villanueva's Portfolio",
+  "short_name": "CalicOS",
+  "description": "Y2K / Windows 98-inspired desktop portfolio of Francis Villanueva. Fully responsive for mobile and desktop: desktop and tablet get the Windows 98 desktop experience, the mobile view gets a distinct iOS 5 (iPhone 4)-inspired interface.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#008080",
+  "theme_color": "#000080",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
