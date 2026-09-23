@@ -40,7 +40,7 @@ export function loadCache(key, maxAge) {
 
         return payload.data;
 
-    } catch (err) {
+    } catch {
         console.warn(`Invalid cache for "${key}".`);
 
         localStorage.removeItem(

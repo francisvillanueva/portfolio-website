@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 
 import DocumentsIcon from '../assets/icons/Documents.webp';
 import ExplorerIcon from '../assets/icons/Explorer-outline.webp';
