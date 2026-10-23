@@ -36,7 +36,7 @@ export default function ResumeModal({ show, onClose }) {
                         <a href="https://github.com/francisvillanueva" target="_blank" rel="noopener noreferrer">
                             <img src={GitHubIcon} alt="GitHub" className="resume-icon"/>
                         </a>
-                        <a href="https://www.youtube.com/channel/UCUZ9c_25SNsxrPsxogtNspA" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.youtube.com/@GooseInShoes" target="_blank" rel="noopener noreferrer">
                             <img src={YouTubeIcon} alt="YouTube" className="resume-icon"/>
                         </a>
                         <a href="https://www.linkedin.com/in/frncisv/" target="_blank" rel="noopener noreferrer">
@@ -98,7 +98,7 @@ export default function ResumeModal({ show, onClose }) {
                             <a href="https://github.com/francisvillanueva/GamingRigz" target="_blank" rel="noopener noreferrer"><h5>GamingRigz, E-Commerce Platform</h5></a>
                             <h5>2025</h5>
                         </div>
-                        <h6>PHP • Laravel • MySQL • Eloquent ORM • Vite</h6>
+                        <h6>PHP • Laravel • MySQL • Eloquent ORM</h6>
                         <ul>
                             <li>Developed an end-to-end e-commerce platform enabling product management, customer ordering, order tracking, and administrative order processing, delivering a complete shopping workflow from product creation through order fulfillment.</li>
                             <li>Implemented the application backend using Laravel building CRUD operations, relational data models, server-side validation, image upload handling, authentication and authorization controls, order lifecycle and payment-status workflows, and unique order tracking identifiers.</li>
@@ -108,7 +108,7 @@ export default function ResumeModal({ show, onClose }) {
                             <a href="https://github.com/francisvillanueva/portfolio-website" target="_blank" rel="noopener noreferrer"><h5>CalicOS, A Personal Website Portfolio</h5></a>
                             <h5>2025</h5>
                         </div>
-                        <h6>HTML • JavaScript • React • Node.js • Supabase • RESTful APIs • Vite</h6>
+                        <h6>HTML • JavaScript • React • Node.js • Supabase • RESTful APIs</h6>
                         <ul>
                             <li>A personal portfolio website that implements real-time weather widgets, geolocation services, caching, and a mobile responsive UI components using React JS.</li>
                             <li>Developed a Windows-inspired portfolio website designed to contact, present projects, and showcase creative works such as pixel arts within the Y2K-inspired interface. The portfolio integrates Supabase for backend services and external RESTful APIs for dynamic weather and geolocation data.</li>

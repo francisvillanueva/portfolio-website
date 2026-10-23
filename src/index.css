@@ -410,12 +410,6 @@ li img {
     background: var(--win-gray-darker);
 }
 
-.project-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 /* Resume modal */
 .resume-modal .modal-content{
     background-color: #FFF0D1;

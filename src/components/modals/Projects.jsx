@@ -4,7 +4,8 @@ export default function ProjectsModal({ show, onClose }) {
     return (
         <AppModal show={show} onClose={onClose} title="Projects" className="projects-modal" size="lg">
             <div className="project-header">
-                <h3>FacePass</h3> <i>Python, OpenCV, Flask</i>
+                <h3>FacePass</h3> 
+                <i>Python • OpenCV • Flask</i>
             </div>
             <a href="https://github.com/francisvillanueva/FacePass" target="_blank" rel="noopener noreferrer">View Project</a>
             <hr />
@@ -16,7 +17,8 @@ export default function ProjectsModal({ show, onClose }) {
             </p>
             <br />
             <div className="project-header">
-                <h3>GamingRigz Website</h3> <i>HTML, JavaScript, React, Node.js</i>
+                <h3>GamingRigz Website</h3>
+                <i>HTML • JavaScript • React • Node.js</i>
             </div>
             <a href="https://github.com/francisvillanueva/GamingRigz" target="_blank" rel="noopener noreferrer">View Project</a>
             <hr />
@@ -27,7 +29,8 @@ export default function ProjectsModal({ show, onClose }) {
                 The GamingRigz website was developed using the Laravel framework and deployed within a local development environment powered by XAMPP, where I collaboratively co-programmed and implemented the proposed e-commerce platform for the store Gamingrigz.
             </p>
             <div className="project-header">
-                <h3>CalicOS</h3> <i>HTML, JavaScript, React, Vite, Supabase</i>
+                <h3>CalicOS</h3>
+                <i>HTML • JavaScript • React • Supabase</i>
             </div>
             <a href="https://github.com/francisvillanueva/portfolio-website" target="_blank" rel="noopener noreferrer">View Project</a>
             <hr />
